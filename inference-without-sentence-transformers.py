@@ -31,3 +31,6 @@ sentence_embeddings = F.normalize(sentence_embeddings, p=2, dim=1)
 
 print("Sentence embeddings:")
 print(sentence_embeddings)
+
+from torch.nn import CrossEntropyLoss
+print(CrossEntropyLoss()(sentence_embeddings[0], sentence_embeddings[1]))
